@@ -42,7 +42,7 @@ body {
 }
 
 .profile img {
-  width: 8rem;
+  width: 7rem;
   max-width: 512px;
   margin-right: 2rem;
 
@@ -50,11 +50,7 @@ body {
   box-shadow: 0.15rem 0.2rem 0.2rem rgba(0, 0, 0, 0.03);
 }
 
-.profile h1 {
-  margin: 0.25em 0;
-  line-height: 1.1em;
-}
-
+.profile h1 { margin: 0.25em 0; }
 .profile h2 {
   margin: 0.1em 0;
   font-size: 1.1em;
@@ -63,11 +59,10 @@ body {
 
 .about {
   margin: 0 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 
-  text-align: justify;
-  text-indent: 2em;
-  line-height: 1.4em;
+  text-indent: 1.5em;
+  line-height: 1.5em;
 }
 
 .about h1 {
@@ -75,9 +70,9 @@ body {
   margin-top: 1.3em;
 }
 
-/* ------------------------------- *
- | Projects and Certificates pages |
- * ------------------------------- */
+/* ------------- *
+ | Catalog pages |
+ * ------------- */
 
 .catalog { padding: 0 1.25rem; }
 .catalog h1 {
@@ -91,8 +86,11 @@ body {
   margin: 1.25rem 0;
 }
 
-.project h1, .cert h1 { font-size: 1.2em; }
-.project p, .cert p { line-height: 1.25em; }
+.project h1, .cert h1 {
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+.project p, .cert p { line-height: 1.3em; }
 
 .project {
   flex-direction: column;
@@ -103,11 +101,15 @@ body {
 }
 
 .project h1 {
-  margin-top: 0.25em;
-  margin-bottom: 0.5em;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
 }
 
-.project p { margin: 0.25em 0; }
+.project p {
+  margin-top: 0.25em;
+  margin-bottom: 0.1em;
+}
+
 .project small { font-size: 0.8em; }
 
 .cert {
@@ -125,9 +127,40 @@ body {
   margin-right: 0.75rem;
 }
 
+.cert h1 { margin-top: 0.5em; }
+.cert p { margin-bottom: 0.5em; }
+
 /* ------------- *
  | Media queries |
  * ------------- */
+
+@media only screen and (max-width: 600px) {
+  .navbar a {
+    /* Center and fill free space. */
+    flex-grow: 1;
+    padding: 0.6rem 0;
+  }
+
+  .profile { margin: 1.25rem; }
+  .profile img {
+    width: 6rem;
+    margin-right: 1.25rem;
+  }
+  .about {
+    margin: 0 1.25rem;
+    margin-bottom: 0.5rem;
+    text-indent: 1em;
+  }
+
+  .catalog { padding: 0 1rem; }
+  .project { padding: 0.75rem; }
+  .project, .cert { margin: 1rem 0; }
+  .cert { padding: 0.5rem; }
+  .cert img {
+    width: 5rem;
+    margin-right: 0.5rem;
+  }
+}
 
 @media (prefers-color-scheme: light) {
   body {
@@ -152,7 +185,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    color: #eee;
+    color: #f5f5f5;
     background-color: #212121;
   }
 
@@ -169,32 +202,4 @@ body {
   .catalog small { color: #b5b5b5; }
   .project small { color: #757575; }
   .cert { border-color: #505050; }
-}
-
-@media only screen and (max-width: 600px) {
-  .navbar a {
-    /* Center and fill free space. */
-    flex-grow: 1;
-    padding: 0.6rem 0;
-  }
-
-  .profile { margin: 1.25rem; }
-  .profile img {
-    width: 6rem;
-    margin-right: 1.25rem;
-  }
-  .about {
-    margin: 0 1.25rem;
-    margin-bottom: 0.5rem;
-    text-indent: 1.5em;
-  }
-
-  .catalog { padding: 0 1rem; }
-  .project { padding: 0.75rem; }
-  .project, .cert { margin: 1rem 0; }
-  .cert { padding: 0.5rem; }
-  .cert img {
-    width: 5rem;
-    margin-right: 0.5rem;
-  }
 }
