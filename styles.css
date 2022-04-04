@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 body {
   margin: 0;
   font-family: Raleway, Arial, sans-serif;
@@ -36,31 +38,32 @@ body {
  * ---------- */
 
 .profile {
-  margin: 2rem;
+  margin: 2rem 2rem 1rem 2rem;
   display: flex;
   align-items: center;
 }
 
 .profile img {
   width: 7rem;
+  height: auto;
   max-width: 512px;
-  margin-right: 2rem;
 
+  margin-right: 2rem;
   border-radius: 50%;
   box-shadow: 0.15rem 0.2rem 0.2rem rgba(0, 0, 0, 0.03);
 }
 
-.profile h1 { margin: 0.25em 0; }
+.profile h1 { margin: 0 0 0.25em 0; }
 .profile h2 {
-  margin: 0.1em 0;
-  font-size: 1.1em;
+  margin: 0.1em 0 0 0;
+  font-size: 1.2em;
   font-weight: lighter;
 }
 
 .about {
-  margin: 0 3rem;
-  margin-bottom: 1.5rem;
+  margin: 0 3rem 1.5rem 3rem;
 
+  font-size: 1.1em;
   text-indent: 1.5em;
   line-height: 1.5em;
 }
@@ -74,23 +77,27 @@ body {
  | Catalog pages |
  * ------------- */
 
-.catalog { padding: 0 1.25rem; }
-.catalog h1 {
-  margin-top: 1em;
-  font-size: 1.5em;
+.catalog {
+  padding: 0 1.25rem;
+  line-height: 1.3em;
 }
-.catalog small { font-size: 0.85em; }
+
+.catalog h1 {
+  margin-top: 0.8em;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.catalog small {
+  font-size: 0.85em;
+  line-height: 1.3em;
+}
 
 .project, .cert {
   display: flex;
   margin: 1.25rem 0;
 }
-
-.project h1, .cert h1 {
-  font-size: 1.2em;
-  line-height: 1.3em;
-}
-.project p, .cert p { line-height: 1.3em; }
+.project h1, .cert h1 { font-size: 1.2em; }
 
 .project {
   flex-direction: column;
@@ -100,16 +107,8 @@ body {
   box-shadow: 0.15rem 0.15rem 0.2rem rgba(0, 0, 0, 0.05);
 }
 
-.project h1 {
-  margin-top: 0.1em;
-  margin-bottom: 0.3em;
-}
-
-.project p {
-  margin-top: 0.25em;
-  margin-bottom: 0.1em;
-}
-
+.project h1 { margin: 0 0 0.4em 0; }
+.project p { margin: 0.3em 0 0 0; }
 .project small { font-size: 0.8em; }
 
 .cert {
@@ -123,6 +122,7 @@ body {
 
 .cert img {
   width: 6rem;
+  height: auto;
   max-width: 384px;
   margin-right: 0.75rem;
 }
@@ -141,24 +141,23 @@ body {
     padding: 0.6rem 0;
   }
 
-  .profile { margin: 1.25rem; }
+  .profile { margin: 1.25rem 1.25rem 0.7rem 1.25rem; }
   .profile img {
     width: 6rem;
     margin-right: 1.25rem;
   }
   .about {
-    margin: 0 1.25rem;
-    margin-bottom: 0.5rem;
+    margin: 0 1.25rem 0.25rem 1.25rem;
     text-indent: 1em;
   }
 
   .catalog { padding: 0 1rem; }
-  .project { padding: 0.75rem; }
   .project, .cert { margin: 1rem 0; }
-  .cert { padding: 0.5rem; }
+  .project { padding: 0.8rem; }
+  .cert { padding: 0.6rem; }
   .cert img {
     width: 5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.6rem;
   }
 }
 
