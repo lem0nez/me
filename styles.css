@@ -11,6 +11,9 @@ body {
 }
 
 .navbar {
+  position: sticky;
+  top: 0; /* Navbar sticks when its top edge touches the viewport's top edge */
+  width: 100%;
   display: flex;
   box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.05);
 }
